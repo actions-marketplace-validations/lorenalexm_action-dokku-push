@@ -7,7 +7,7 @@ script_dir=$(dirname $0)
 echo ""
 echo "Pushing to Dokku Host";
 
-git push $DOKKU_REPO $GITHUB_SHA:refs/heads/$DEPLOY_BRANCH --force
+git push $DOKKU_REPO main --force
 
 [ $? -eq 0 ]  || exit 1
 
