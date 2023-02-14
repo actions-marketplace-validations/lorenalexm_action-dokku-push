@@ -40,12 +40,6 @@ zrrvVLniH+UTjreQkhbFVqLPnL44+LIo30/oQJPISLxMYmZnuwudPN6O6ubyb8MK
 
 ***
 
-#### `deploy_branch`
-
-Optional. The branch to be deployed when pushing to Dokku (default to `master`). Useful when a [custom deploy branch](http://dokku.viewdocs.io/dokku/deployment/methods/git/#changing-the-deploy-branch) is set on Dokku.
-
-Example : `develop`
-
 ## Example usage 
 
 This action is particularly useful when triggered by new pushes :
