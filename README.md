@@ -1,9 +1,7 @@
 # action-dokku-deploy
 Easily deploy an app to your Dokku Instance from GitHub
 
-:sparkles: **Now support deployments over Cloudflare Tunnels using Cloudflared**
-
-See [`obrassard/action@cloudflared`](https://github.com/obrassard/action-dokku-push/tree/cloudflared) for more details.
+This fork simply takes the work done by [`obrassard/action-dokku-push`](https://github.com/obrassard/action-dokku-push) and forces use of the `main` GitHub branch.
 
 ### Requirements
 
@@ -15,7 +13,7 @@ Please note that this action is compatible with `dokku >= 0.11.6`.
 
 **Required**. The dokku app's git repository url **(in SSH format)**. 
 
-Example : `ssh://dokku@dokku.myhost.ca:22/appname`
+Example : `ssh://dokku@dokku.me:22/appname`
 
 ***
 
@@ -70,8 +68,7 @@ jobs:
     - name: Push to dokku
       uses: obrassard/action-dokku-deploy@v1.0.2
       with:
-        dokku_repo: 'ssh://dokku@dokku.myhost.ca:22/appname'
+        dokku_repo: 'ssh://dokku@dokku.me:22/appname'
         ssh_key: ${{ secrets.SSH_KEY }}
-        deploy_branch: 'develop'
 ```
 
